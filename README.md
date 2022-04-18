@@ -6,7 +6,7 @@ https://bit.ly/3u33Qh8
 
 ### Contributors
 
-Contributors: Tom Murphy, Marilyn Poku & Mayur Kumar
+Contributors: [Tom Murphy](https://github.com/TMurp), [Marilyn Poku](https://github.com/marilynpoku) & [Mayur Kumar](https://github.com/Kumasta)
 
 ### Brief
 
@@ -296,12 +296,12 @@ Creating functions that change depending on the user status.
 
 Using mapbox-gl.
 
-###Contact
+### Contact
 
 Email - tommurphyse@gmail.com
 
-Social - linkedin.com/in/tom-j-murphy/
+Social - [linkedin.com/in/tom-j-murphy/](https://www.linkedin.com/in/tom-j-murphy/)
 
 Project Link - https://bit.ly/3u33Qh8
 
-GitHub - github.com/TMurp
+GitHub - [github.com/TMurp](github.com/TMurp)
