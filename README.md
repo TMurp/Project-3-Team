@@ -1,243 +1,307 @@
-### General Assembly Project-3: Full-stack Project. 
-#  --Hidden Gems--
+## Deployed Project Link
 
-Contributers: Mayur Kumar, Tom Murphy & Marilyn Poku
+https://bit.ly/3u33Qh8
 
-### Project Link : TBA
+## Overview & Concept
 
-## Table of Contents
+### Contributors
 
-- [Brief](#brief)
-- [Concept](#concept)
-- [Languages, Packages and, technology used](#languages-packages-and-technology-used)
-  - [Back-end](#back-end)
-  - [Front-end](#front-end)
-- [Install](#install)
-- [Approach](#approach)
-    - [Document-Model-Breakdown](#document-model-breakdown)
-    - [API-End-Points](#api-end-points)
-    - [Front-end components](#front-end-components)
-      - [Nav-Bar](#nav-bar)
-      - [Home Page](#home-page)
-      - [Map Page](#map-page)
-      - [Chowcase](#showcase)
-      - [Gem Form](#gem-form)
-      - [Profile Page](#profile-page)
-      - [Styling](#styling)
-      - [Seeding](#seeding)
-- [Challenges](#challenges)
-- [Future Improvments](#future-improvements--changes)
-- [Main Takeaways](#main-takeaways)
+Contributors: Tom Murphy, Marilyn Poku & Mayur Kumar
 
-## Brief
-Working for the first time as a group of 3, myself (Mayur), Tom and Marilyn over a period of 8 working days created a full stack front-end webstie and back-end database for our 3rd project during the **Software Engineering Immersive** (SEI)  bootcamp at **General Assembly**. 
+### Brief
 
-Our task was to create a **back-end** database with Mongoose, MongoDB, Node and Express JS with API endpoints to seed data and give users ability to register/login, create new and edit documents while navigating a **front-end** website built with **React JS**. The website also needed to be **mobile friendly** as well as usable on a desktop. 
+A group project completed within a timeframe of 8 days. A MERN stack web app created as my 3rd project during my Software Engineering Immersive bootcamp at General Assembly and 8 weeks into the course and my coding journey.
 
-## Concept
-The site we built is called Hidden Gems, a website where users can explore a map of the UK & Ireland and find interesting real locations around the country that are lesser known or documented and learn more about them. 
+The project task was to create a MERN stack app that allows users to register/login, create and edit entries. The project also needed to have responsive design (mobile friendly).
 
-On the home page you can discover new locations from randomly generated carousels and some of the highest rated places too. Here you can also search by name and type of place that suit your interests.
+### Concept
 
-Users are able to navigate around the map and see markers that represent each location, where upon clicking a marker it will display a popup with a picture and basic information about the place. The popup links to a showcase page where you can see a description of the location, ratings and comments users have given it. Users are also able to like a comment made by others. In order to enable users to interact with the webpage, they would have to register/login. This will also enable users to add their own locations to the map by clicking on an empty space on the map which will show a prompt for users to make a new entry (What we call a "(Hidden) Gem").
+The website we created is called Hidden Gems, it is a website for finding, posting, rating and discussing interesting places that might be unknown or niche in the UK.
+The home page uses a React-Bootstrap carousel to display a randomised selection of the site's locations / ‘hidden gems’. Users can also search if they are looking for something specific.
+Using our map page users can easily create a new ‘Hidden Gem’ by simply clicking where on the desired location, then the user will be prompted to enter the details of the Hidden Gem.
+On a Hidden Gem’s page users can rate and comment, users can also like comments. Clicking on any poster/ commenters username will take you to their profile page.
+The profile page gives users the ability to tell others about themselves. It also shows the users posted gems, their rating and the average rating of all their posts.
 
-To add to a sense of personal presence, users are able to create their own profile for others to view, here you can upload a profile photo and write a bio about yourself. The profile page will also display all the entries the user has made, and display the average rating of all the scores that have been given to it. 
+### Technologies Used
 
-![Home Map page mobile](https://github.com/Kumasta/Images-Gifs/blob/main/mobile-home-map.png?raw=true)
-
-## Languages, Packages and, technology used:
-- Javascript
-- SASS (CSS)
-- JSX (HTML5 via react)
+- JavaScript
+- SASS
+- JSX
 
 ### Back-end
-- express: ^4.17.2,
-- jsonwebtoken: ^8.5.1,
-- mongoose: ^6.2.1,
-- mongoose-unique-validator: 2.0.3
+
+- Mongoose
+- Mongoose-unique-validator
+- Jsonwebtoken
+- Express
 
 ### Front-end
-- axios: ^0.25.0,
-- bootstrap: 5.1.3,
-- buffer: ^6.0.3,
-- eslint-plugin-react: ^7.28.0,
-- mapbox-gl: ^2.7.0,
-- react: ^17.0.2,
-- react-bootstrap: ^2.1.2,
-- react-dom: ^17.0.2,
-- react-map-gl: ^7.0.5,
-- react-router-dom: ^6.2.1,
-- react-router-hash-link: ^2.4.3,
-- react-scripts: 5.0.0,
-- react-select: ^5.2.2,
-- sass: ^1.49.7
 
-## Install
-<img width="184" alt="Screenshot 2022-02-21 at 17 42 32" src="https://user-images.githubusercontent.com/94964514/155004644-f473a963-d049-421c-bae0-3f0cb4125834.png">
+- Axios
+- Buffer
+- Eslint-plugin-react
+- Mapbox-gl,
+- React
+- React-bootstrap
+- React-dom
+- React-map-gl
+- React-router-dom
+- React-router-hash-link
+- React-scripts
+- React-select
 
-If working on local server:  
+## Approach Taken 
 
-1. Install mongoDB [https://docs.mongodb.com/guides/server/install/] and start mongo server.       
-2. Start database from your terminal `mongosh`   
-Back end terminal         
-3. Install packages `yarn init`   
-4. seed database `yarn seed`   
-5. start server `yarn serve`   
+### Wireframing
 
-Front End terminal    
-1. Install packages `yarn`   
-2. start site server `yarn start`      
+We used excalidraw.com to create our wireframes for each page. We used these to visualise the front-end and the styling needed. We colour coded certain components to visualise their importance and priority (Minimal viable product or stretch goal).
 
-## Approach
+![image9](https://user-images.githubusercontent.com/94997077/163826334-1457bcb3-cfed-4828-a100-61d0c8c627eb.png)
 
-We began the project creating a wireframe draft of the website and its different components. Using a colour code system we divided our completion targets by MVP and stretch goals if we meet them. MVP goals would include a home page with carousel and search functionality for our main documents. An interactive map using mapbox-gl to discover locations and a link to a showcase of  them. As well as being able to link to make new entries and the ability to post comments on each showcase. To be able to register and login as a user to interact with the site.  
-![Project-3-wire-frame](https://user-images.githubusercontent.com/94964514/155013109-a7a4ba48-7eba-4ab6-95c4-4a0bc553f325.png)
+We created a Trello board to organise our project. First is a design section that includes all of our theme ideas, colour palettes, animation and symbol ideas. The packages section helped plan what back and front ended packages we would need for the project. The user stories section helped us visualise using the site and what we would need to fulfil that vision.
+In the To Do section we added every component needed to complete our vision. From there we could choose which of us would work on a certain component, once a component was completed it would be moved to the Code Review section where we would test and tweak.
 
-We then created a trello Kanban workspace and roughly planned out the theme, design, user stories, components and file structure. We each would then take a component and start building the front-end after the back-end was done together at once.
-<img width="1680" alt="image" src="https://user-images.githubusercontent.com/94964514/155026617-d7a54fb2-73a8-43f3-bf55-72f0be39a091.png">
+![image10](https://user-images.githubusercontent.com/94997077/163826393-646955ec-5c4e-45c5-89d0-da9692c25087.png)
 
+We used Zoom throughout the project to communicate. When building the back-end together or when needing a second opinion for the components we worked on alone, Zoom’s screen sharing function was used.
+Once we built the back-end together we split the front-end components among us to work on alone. However we would often screen share and discuss the code for help or second opinions.
+I worked on the show page, about page, rating component and comment likes component.
 
-### Document Model Breakdown. 
-We started with building the back-end database, models, controllers and routes. Our main documents for the database were broken into 2 parts, locations (What we call "pins") and user.  
+## Back-end
 
-#### User Model
-The user model comprises basic login details, username, email, password and confirmation. as well as an embedded schema for a profile schema which was utilised for one of our stretch goals for a profile page which will be described further down. We also have a virtual field of owned "pins" that the user creates on the site, this would allow for permissions checks for editing and deleting documents. 
-<img width="547" alt="image" src="https://user-images.githubusercontent.com/94964514/155013958-9bc5ff8d-525a-404d-96ef-0d889a83c2e3.png">
+### Models
 
-#### Pin Model
-The "pin" schema contained a lot more keys as well as more embedded schemas. An embedded comment schema and a like rating schema as well as a "like" schema that is embedded in the comment schema to enable users to like a comment as one of our stretch goals. Virtual fields include an average rating calculated from the array of ratings that would be produced and a total "likes" virtual field to count how many likes are in the array.   
-<img width="377" alt="image" src="https://user-images.githubusercontent.com/94964514/155014654-9821b963-de59-4458-80c0-d4ec46c33ec2.png">
+### User Model
+The user model has the required username, email and password. The superUser field can be used to give a user admin privileges.
+The embedded schema userSchema is seen on the profile page to display the user's name, bio and profile picture.
+The virtual field ownedPins is used to check permission when the user wants to edit or delete a pin.
 
+![image25](https://user-images.githubusercontent.com/94997077/163826799-8c03cd74-6aca-4d48-9542-61e6abdee62f.png)
 
-### API-End-Points
-(* secure route)   
-(+ Body required)   
-({ } id/text/token)
+### Pin Model
+The pin schema is more complex. We have all the required fields such as title, type, longitude and latitude as well as optional fields like tags and status.
+The embedded schema reviewSchema is used to add comments to a pin. This has an embedded schema within it, the likeSchema. This schema tracks the likes of a comment, the owner field is used to make sure that a user cannot give multiple likes to one comment.
+The reviewSchema also has a virtual field sumOfLikes, which is used to calculate the amount of likes a comment has. If a comment has no likes it will return a string ‘Not rated yet’.
+The embedded schema pinRatingSchema is used to give the pin a rating from 1 to 5, the owner field is used to make sure that a user cannot give multiple ratings to one pin.
+The virtual field avgRating is used to calculate the average of all the ratings a pin receives, if there are no ratings it will instead return a string ‘Not rated yet’.
 
-#### Main documents (pins)
-- Get all `Get /api/pins`
-- Get one `Get /api/pins/{pin ID}`
-- Post new*+ `POST /api/pins`    
-![image](https://user-images.githubusercontent.com/94964514/155016630-0338f716-fdda-4520-bf81-410db1c59b4e.png)
-- Update one*+ `PUT /api/pins/{pin ID}`   
-![image](https://user-images.githubusercontent.com/94964514/155016825-4e562a86-c2c2-4cae-b216-e0a3250a73e1.png)
-- Delete one* `DELETE /api/pins/{pin ID}`
+![image22](https://user-images.githubusercontent.com/94997077/163826854-4bc94b02-7a0e-4c63-892f-561ec5960737.png)
 
-#### Pin Rating
-- Add rating*+ `POST /api/pins/{pin ID}/rating` (Between 1 - 5).   
-![image](https://user-images.githubusercontent.com/94964514/155017307-eb729923-826f-41f9-8228-df191e30989e.png)
-- Update rating *+ `PUT /api/pins/{pin ID}/rating/{rating ID}` (Between 1 - 5)    
-![image](https://user-images.githubusercontent.com/94964514/155017462-bd1b5bb2-b093-4590-b511-c1bc16226987.png)
+## API-End-Points
 
-#### Pin Comment 
-(During development we changed terminology from review to comments)     
-- Add comment*+ `POST /api/pins/{pin ID}/reviews`    
-![image](https://user-images.githubusercontent.com/94964514/155023193-371db78c-07f7-4eef-9be8-a2ae3647470d.png)
-- Updated comment*+ `PUT /api/pins/{pin ID}/reviews/{review ID}`   
-![image](https://user-images.githubusercontent.com/94964514/155023341-2a0a6ff4-59de-4551-9b51-cba606e84f41.png)
-- Delete comment* `DELETE /api/pins/{pin ID}/reviews/{review ID}`
+The API-end-points are what url we target with Axios requests. For example below shows a PUT request.
 
-#### Comment like
-- Like comment*+ `POST /api/pins/{pin ID}/review/{review ID}/like`        
-![image](https://user-images.githubusercontent.com/94964514/155023611-43401d2b-ed57-4d16-abe0-e905c551c4e2.png)
-- Unlike comment* `DELETE /api/pins/{pin ID}/review/{review ID}/like/{like ID}`
+<img width="821" alt="image17" src="https://user-images.githubusercontent.com/94997077/163826988-e1f8f5c0-e7d3-40eb-85e1-eb21a6a86ae5.png">
 
-#### Login / Register
-- Register User+ `POST /api/register`    
-![image](https://user-images.githubusercontent.com/94964514/155023903-53a24d70-efe8-4591-8ed0-2f9117f5d159.png)
-- Login user+ `POST /api/login`     
-![image](https://user-images.githubusercontent.com/94964514/155024015-daf589cd-0bf8-4dba-806d-80e4b78a1f93.png)
+### Register / Login
+To login or register is a simple POST request containing the user data.
 
-#### User Profile
-- Get one profile `GET /api/profile`    
-- Update own profile*+ `GET /api/profile`    
-![image](https://user-images.githubusercontent.com/94964514/155024386-6dac1ce5-6922-4580-b11a-183239e4f702.png)
+**Register User** - POST /api/register/
 
-#### Mapbox Geocode API
-Enables serach for address on the map. Container props for limited search for Uk & Ireland and fuzzy match.         
-`GET https://api.mapbox.com/geocoding/v5/mapbox.places/**{___search_text____}**.json?country=gb,ie&fuzzyMatch=true&access_token=**{_mapbox_token_}**`
+<img width="270" alt="image26" src="https://user-images.githubusercontent.com/94997077/163827424-0e9b5d34-d3af-4501-88e7-5af1420dcf82.png">
 
-### Front-end components
+**Login User** - POST /api/login/
 
-#### Nav-Bar
-Nav bar contains links to home, map and profile pages. The serach bar is contained on the home page so the serach link will take you to the home page and using react-router-hash-link, scroll the page down to the search. While the user is not logged in, buttons to login & register are displayed.   
-<img width="793" alt="image" src="https://user-images.githubusercontent.com/94964514/155026273-af51ddd2-1a03-4f85-b11a-04c0cf2acc87.png">
+<img width="188" alt="image16" src="https://user-images.githubusercontent.com/94997077/163827432-4d2f85e0-fd5d-4a19-8ca8-9fb24a49b84d.png">
 
-After loggin in the button switch to logout and a link to the users profile page. The site name and diamond logo (Nav.Brand) in the top left will link you to the home page.   
-<img width="793" alt="image" src="https://user-images.githubusercontent.com/94964514/155026178-ef71e8fa-d2e9-4970-80f7-b0fa67f80af4.png">
+### User Profile
+The user profile needs to be retrieved with a GET request or edited with a PUT request.
 
-In mobile view, the nav bar collaspes into a dropdown activted by clicking on the "hamburger" icon.    
-<img width="558" alt="image" src="https://user-images.githubusercontent.com/94964514/155028128-016ddffa-1c39-45b9-8c3b-fc1a7f7fea90.png">
+**Get a Profile** - GET /api/profile/[userID]
 
-<img width="559" alt="image" src="https://user-images.githubusercontent.com/94964514/155027599-cd8e0937-8dc5-4e4b-a722-c945308dd1f5.png">
+No body required
 
-#### Home page
-Home page contains a carousel that on load displays 5 random records from our database. On click, it will navigate the user to the showcase of that record. Below is a card display of 3 of the highest rated gems on the site. This is specified as having an average rating of 4 or more. On each card like this you will be able to see the gem rating display which rounds up or down to the nearest 0.5 and displays a half diamond in score dynamically. Finally on the homepage is the search function of the site. Clicking on search in the Nav bar will navigate the user to the home page and scroll to the section. Here users can search by text and by category with the text input and drop down.  
-<img width="809" alt="image" src="https://user-images.githubusercontent.com/94964514/158586869-13c5090f-10d6-4d71-ace6-7683c819ef13.png">
+**Edit a profile (secure route)** - PUT /api/profile/[userID]
 
-#### Map page
-The map page is one of  my sections that I worked on primarily. The map is limited to view of the British Isles by defining the max bounds longitude and latitude coordinates. Users on desktop and with touch on mobile can zoom in and out, change the pitch and positions of the map at will. The filter button will provide a drop down box that allows users to filter gems by category and tag associated with it. Since there can be any number of tags in the database and not all are associated with each category, tag search is locked until you choose a category. Once a category is chosen a list of tags is generated from these filtered documents and all tags are collected and sorted into a new drop down list. This way you are guaranteed to see results when you combine filters by category and tag. 
-  
-![image](https://user-images.githubusercontent.com/94964514/156383787-fb64bc2f-9ee2-4b69-bac3-504ea1f63dad.png)
+Body must be an existing field and different from the current value.
 
+### Pins
+Here things get more complex, not only can we use GET, POST, PUT and DELETE requests on the pin but also the pin’s ratings, comments and comment likes.
 
-Clicking/tapping on a gem icon will display a popup card with a picture and basic information about that gem. Clicking anywhere else on the map will either prompt you to create a new Gem at that location or if you are not logged in, to register or log into your account. This will take you to the Gem form to create a new Gem record. 
+**Get all pins** - GET /api/pins
 
-<img width="876" alt="Screenshot 2022-03-16 at 11 53 59" src="https://user-images.githubusercontent.com/94964514/158584408-54960c88-fd6c-445b-86e4-7693a1a85cbe.png">
+No body required
 
-#### Showcase
+**Get one pin** - GET /api/pins/[pinID]
 
-The showcase shows the most information about the Gem record. Here users will be able to learn all the details the creator has added about the Place. At the bottom is a mini version of the map that just shows the location of the place. If users are logged in, they will be able to have further interactions with the page such as giving a rating to the Gem. Hovering over the gem rating icon will cause it to pulse and on click/tap the rating is sent through a put request and added. The average rating is updated, that score is updated in real time and the number of diamonds changes is the score dictates it to. Logged in users will also be able to type and leave comments. If they are the comment owner, they can either edit or delete it. And They will be able to like other comments too. If they click like on a comment they have liked before, the like will be removed and the count will display one less like total. 
+No body required
 
-<img width="993" alt="Screenshot 2022-03-16 at 11 59 21" src="https://user-images.githubusercontent.com/94964514/158585252-8e7dfdd6-32ce-4d6c-9bc8-e6271389a57f.png">
+**Post a pin (secure route)** - POST /api/pins
 
-#### Gem Form
-When users create a new Gem they will be taken to form below. Here they can add all the relevant details as they need to. Upload a photo from their library and it will then be hosted on cloudinary, and displayed at the bottom of the form. At the top is another mini map but here users can move the pin to adjust the location of the Gem. Categories are chosen from a set list but tags can either be selected from previously made ones or created by the user themselves and that will then be found in the list in the future. 
+![image11](https://user-images.githubusercontent.com/94997077/163827475-0b7d675a-dbbe-4de2-9e3a-2f970fc87758.png)
 
-<img width="628" alt="image" src="https://user-images.githubusercontent.com/94964514/158585748-641a4ef4-abf4-493c-bf6a-aa12ba028dc8.png">
+**Update a pin (secure route)** - PUT /api/pins/[pinID]
 
-#### Profile Page
-User's profile page can be accessed from the Nav bar. Their own or other user profile pages can also be accessed by clicking their user name in the showcase or comment post. Users will be able to add a profile photo and bio as well as see some basic stats of their account such as how many gems they have made, the average rating of all those that have rating, and when their account was created. If the user has created Gems it will be displayed below on the page where users will have the ability to edit the Gem or delete it. 
+Body must be an existing field and different from the current value.
 
-<img width="1283" alt="image" src="https://user-images.githubusercontent.com/94964514/158586131-d2c4014a-19f9-4387-940d-c54d7b09f236.png">
+**Delete a pin (secure route)** - DELETE /api/pins/[pinID]
 
+No body required
+
+**Add a rating (secure route)** - POST /api/pins/[pinID]/rating
+
+Rating between 1 - 5.
+
+**Edit a rating (secure route)** - PUT /api/pins/[pinID]/rating
+
+Rating between 1 - 5.
+
+**Add a comment (secure route)** - POST /api/pins/[pinID}/reviews
+
+![image13](https://user-images.githubusercontent.com/94997077/163827558-14e20e74-0ded-46f9-b0f2-3533400a6c8b.png)
+
+**Edit a comment (secure route)** - PUT /api/pins/[pinID}/reviews/[reviewID]
+
+![image19](https://user-images.githubusercontent.com/94997077/163827605-6550646a-9a6a-4a1f-aa9f-a47a9b352b1c.png)
+
+**Delete a comment (secure route)** -  DELETE /api/pins/[pinID}/reviews/[reviewID]
+
+No body required.
+
+**Like a comment (secure route)** - POST /api/pins/[pinID]/review/[reviewID]/like
+
+![image2](https://user-images.githubusercontent.com/94997077/163827663-564fd429-bba0-47fe-8aac-afa48cdc0ef0.png)
+
+**Unlike a comment (secure route)** - DELETE /api/pins/[pinID]/review/[reviewID]/like/[likeID]
+No body required.
+
+## Front-end
+### Navbar
+The navbar has two states depending on if a user is logged in or not. In either state the nav bar can take us to the Map and About pages as well as the Search bar. The site symbol also serves as a home button.
+If a user is not logged in the navbar shows buttons to either login or register. If a user is logged in the navbar shows buttons to go to the user’s profile page or to logout.
+
+![image4](https://user-images.githubusercontent.com/94997077/163827808-86cd34c4-4f9e-4bdc-9fd4-9a6317fcab13.png)
+
+![image7](https://user-images.githubusercontent.com/94997077/163827821-43a48427-6f8d-4294-bf91-f2e86c902ed3.png)
+
+We used React Bootstrap for this component, mostly because of the great media query scaling it has. Here we see the mobile view of the navbar and the options dropdown.
+
+![image6](https://user-images.githubusercontent.com/94997077/163827908-4bb522fb-a440-49d1-bc4c-51c9ef7c3008.png)
+
+![image1](https://user-images.githubusercontent.com/94997077/163827919-a21ed5ee-e029-4d6f-a80c-c75eb969c04f.png)
+
+### Home page
+At the top of the home page is a carousel (created with React-bootstrap) that randomly selects some of the pins already in the database.
+Below the carousel is the Most Rated section, here the top three pins with the highest average rating will be shown.
+Below Most Rated is the search function, the user can select a tag from the dropdown list or search manually. The pin gallery below will update as the user types in the search bar to filter for what has been entered.
+
+### Rating Utility
+This is one of the utilities I created for this project. The purpose of this utility is to take a pin’s average rating and display it using the gem logos I created in Photoshop. I created three logos, a hollow gem, half-hollow gem and a normal gem.
+Using these three I could display an average rating. The example below shows an average rating of 2.5.
+
+![gem](https://user-images.githubusercontent.com/94997077/163828224-7e649160-3a92-4f18-b9a8-58df9efa03bc.png)
+
+But what if the rating was 2.8? I decided that instead of creating an image of a partially filled gem for each decimal point I would write code to round the average rating to the nearest integer or .5 decimal.
+
+<img width="459" alt="image21" src="https://user-images.githubusercontent.com/94997077/163828340-78baeb4b-f3db-4a1f-a687-d4fa928341a8.png">
+
+I import the pin’s average rating from our homepage component (where the pin GET request is) and set it as the hasRating state.
+
+Within the useEffect I set the rating variable to my hasRating value.
+
+The ratingRemainder variable is used to calculate any decimal places in the rating.
+
+The rating and ratingRemainder variables are now used in the diamonds array.
+
+The first for loop pushes one gem image into the diamonds array. It does this until it has met the rating value (rounded down to the closest integer).
+
+Next if the ratingRemainder is between 0.25 and 0.75 it pushes a half gem image into the diamonds array (representing rounding to .5 decimal).
+
+The second for loop takes the diamonds array length, if it is less than 5 it pushes a hollow gem image into the diamonds array. It does this until the diamond's array length is 5.
+
+I set the averageRating state as my diamonds array so it can be used in JSX. 
+
+Next to display this on the page I wrote the following JSX. Using a map on the averageRating state it prints out the array, giving each diamond its value as a class (needed for the click function I will show later). If there is no current rating instead a string ‘Not Rated’ will show.
+
+<img width="795" alt="image23" src="https://user-images.githubusercontent.com/94997077/163828562-172c6b92-d048-4156-8938-ccd491e529f4.png">
+
+So far the average rating will be displayed on page load. But I wanted the rating to be interactive, if a user has not already posted a rating for the current pin they can click on a gem and give it the targeted value (clicking the 4th gem will give a rating of 4).
+
+The following code sets the selectRating state as the value of the clicked target’s name (which is established in the map above).
+Then it checks if the current user has already rated the pin by checking the pinRating array for a rating that matches the current user's payload.sub.
+
+<img width="555" alt="image24" src="https://user-images.githubusercontent.com/94997077/163828644-08e25f00-a50c-4c65-b1d3-890b94fde9b9.png">
+
+If the current user has not rated the current pin then on click a post request is sent with the selected rating value. It does this by checking if the ownedRating value (it will be -1 if the current user has no ratings for the current pin).
+
+<img width="548" alt="image8" src="https://user-images.githubusercontent.com/94997077/163828696-927ee533-9a6f-44b7-867b-e44f5e789113.png">
+
+If the current user has already posted a rating a PUT request will be sent instead, changing the rating instead of adding another.
+
+<img width="821" alt="image17" src="https://user-images.githubusercontent.com/94997077/163828748-27b33af4-9bd2-4127-8fba-dd415c21b1ea.png">
+
+Using React and state means that anytime the user clicks to set or update the rating it will update in realtime.
+
+### Show page
+The show page shows all the information about the selected Hidden Gem. If the current user owns the gem it will show an Edit Gem button that links to a form page.
+Below the information is the comment section and a minimap showing the current Hidden Gems location. 
+
+### Map page
+This page shows all current Hidden Gems. Users can click on them to display a card with simple info, if the card is clicked it will take the user to the gem’s show page.
+
+Alternatively the user can use the search bar to filter the Hidden Gems or find a specific one, gems can be filtered by type, tags and address.
+
+Clicking anywhere else on the map will either prompt you to create a new Gem at that location or if you are not logged in, to register or log into your account. This will take you to the Gem form to create a new Gem record.
+
+![image20](https://user-images.githubusercontent.com/94997077/163828853-2499187f-2993-468d-b4cf-1d6def1a2751.png)
+
+### Profile page
+A user's profile page can be found by clicking on their name (found on a comment or as the owner of a Hidden Gem) or if logged in a profile button in the navbar will lead to the user's own profile page.
+
+This page is a great way to edit or delete any of your posted Hidden Gems.
+
+![image18](https://user-images.githubusercontent.com/94997077/163828901-9fb8648f-4a6d-4472-89a5-98867f8b8578.png)
 
 ### Styling
+We decided on a minimalist style with a black and white theme. This allows the Hidden Gem images to shine. However on the map page we went with a dark map theme and bright blue gems to make them a focus.
 
-We had thought about gradients and colour pallets in our planning stage. From our brainstorm we took away the idea of theming around gems and diamonds. The colour scheme went from simple accent colours around each page to primary black and white with a blue Gem for the dark map design so it would contrast with the page.
+### Rating Utility Animations
+For the rating utility I designed I used animations to emphasise its interacability. Two animations were used.
 
-<img width="277" alt="image" src="https://user-images.githubusercontent.com/94964514/158597787-1eb9d391-6eb5-49e2-a1a7-4ffcffdf7912.png">
+The pulse animation triggered on mouse hover, this helps signal to the user that it can be interacted with.
 
-Using bootstrap with defined a lot of margin and padding amounts, the majority of the remaining styling was done using SASS. 
+<img width="230" alt="image12" src="https://user-images.githubusercontent.com/94997077/163828999-75d7c74d-cbfa-444a-80fc-e4ef9ebc24e2.png">
 
+The shake animation triggers on mouse click, this lets the user know the click did something and makes it satisfying.  
 
-### Seeding
-For our demonstration we created all the records as seeds in the back-end files. We had about 30~ seeds for our final presentation. 
-<img width="675" alt="image" src="https://user-images.githubusercontent.com/94964514/158598795-3dec4e2c-e730-431b-83ea-a35a15920fe9.png">
+<img width="435" alt="image15" src="https://user-images.githubusercontent.com/94997077/163829019-09afb90b-ac12-452e-8874-8f37262e2aa0.png">
 
-## Challenges
-- First time working with a map and React-Mapbox-gl was a challenge to get the components to function as I wanted, I needed to read documentation to better understand where my issues where. 
-- First time creating a search system with more than 2 variables, in the case of this project it was to search by a category and a tag along with text. In the end this was simplified to category and tag until we go back and make improvements. 
-- Getting the page to re-render or make a get request when the user updates a record. We spent some time working out a system to get the Get request to fire again when it was updated so that the user can see the effect it had on the page in real time. We worked out a system of useState to be affected on Put request and in turn re-run the get request for the updated information to show. 
-- First time creating a backend from the ground up, we worked closely together, had some trouble with populating our models with nested schema information but it came out very well in the end.  
-- Occasional merge conflicts but resolved relatively quickly.
-- As a group picking a theme/main purpose of the site took some time before we were all behind it. 
+## Challenges, Bugs & Wins
+### Challenges
+The rating utility was the biggest challenge for me during this project, but also the most rewarding. First I had to figure out the best way to display the rating. I created the function to take the average rating and turn it into an array of diamond images that represented the average rating to the nearest .5 decimal place.
 
-## Future Improvements / Changes
+Then using JSX I mapped the array onto the page and created a function that upon clicking a diamond, set the rating.
 
-- Dislike a comment:          
-  At the moment users can like a comment but we built into our  like model a boolean value which would allow us to tally up the total amount of likes, the boolean value we would be able to tally up true values vs false values. This would require changes to the request handling in the front end component. 
+But to avoid a user making multiple ratings I created a function to check if the user had already made a rating, if they had the post request would instead be a put request, this changes the current rating instead of adding another. I used a similar method for the comment likes.
 
-- Re-structure of files/components in the front end file:       
-  As this was the first project in a group of 3, the organisation of the components was messy and hard to follow for another person to look at and understand. 
-  
-- Sort Gems by other metrics:          
-  In the search component add buttons to search by location, date added, rating, number of comments. 
-  
-- Add transition zoom animation to map:       
-  On the map page when clicking on a gem or searching for a location, when activated the map should smoothly transition to that location and zoom. Or even smooth zoom out and then move across the map to then zoom back in.
-  
-## Main Takeaways
-- Working collaboratively as a group, using Github and planning out the each section of the site. 
-- Being more confident in reading package documentation to implement features not as familiar to ourselves. 
-- React framework fluency and implementation, now become one of my favourite systems to work with. 
+### Bugs
+I encountered a few bugs in this project. The biggest being post and put requests triggering multiple times, this was due to useEffects triggering every time the state they depended on being updated.
+
+### Wins
+I really enjoyed making an interactive rating utility, I am proud of its functionality and intractability.
+Using GitHub to work efficiently as a group. We would regularly merge branches and resolve conflicts.
+
+## Future Features + Key Learnings
+### Future Changes / Improvements
+We achieved most of our stretch goals for the project. My main improvement would be refactoring and reorganising the code.
+
+### Key Learnings
+Using GitHub to work collaboratively.
+
+Building a back-end, I gained a lot of confidence using Express, Mongoose and Node.js.
+
+React competency and knowledge, especially using state and useEffects.
+
+Creating functions that change depending on the user status.
+
+Using mapbox-gl.
+
+###Contact
+
+Email - tommurphyse@gmail.com
+
+Social - linkedin.com/in/tom-j-murphy/
+
+Project Link - https://bit.ly/3u33Qh8
+
+GitHub - github.com/TMurp
